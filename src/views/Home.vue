@@ -2,6 +2,7 @@
   <div class="home">
     <k-chart :id="'agChart'" :data="agData"></k-chart>
     <k-chart :id="'alChart'" :data="alData"></k-chart>
+    <lineChart></lineChart>
   </div>
 </template>
 
@@ -9,9 +10,10 @@
 import AG0 from '@/assets/AG0.json'
 import AL0 from '@/assets/AL0.json'
 import kChart from '@/components/kChart'
+import lineChart from '@/components/lineChart'
 export default {
   name: 'Home',
-  components: {kChart},
+  components: {kChart, lineChart},
   data() {
     return {
       chart: '',
@@ -25,5 +27,10 @@ export default {
   methods: {}
 }
 </script>
-<style lang="less" scoped>
+<style lang="less">
+.chart {
+  width: 700px;
+  height: 400px;
+  display: inline-block;
+}
 </style>

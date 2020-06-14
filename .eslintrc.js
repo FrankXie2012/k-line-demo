@@ -1,9 +1,9 @@
 module.exports = {
   root: true,
   env: {
-    node: true,
+    node: true
   },
-  // extends: ['plugin:vue/essential', '@vue/prettier'], //需要dev依赖里安装eslint-config-prettier
+  extends: ['plugin:vue/essential', '@vue/prettier'], //需要dev依赖里安装eslint-config-prettier
   rules: {
     // 'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
     // 'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
@@ -13,12 +13,12 @@ module.exports = {
       {
         semi: false,
         singleQuote: true,
-        endOfLine: 'auto',
-      },
+        endOfLine: 'auto'
+      }
     ],
-    'vue/no-parsing-error': [2, { 'x-invalid-end-tag': false }],
+    'vue/no-parsing-error': [2, {'x-invalid-end-tag': false}]
   },
   parserOptions: {
-    parser: 'babel-eslint',
-  },
+    parser: 'babel-eslint'
+  }
 }

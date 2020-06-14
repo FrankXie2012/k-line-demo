@@ -65,10 +65,3 @@ export default {
   }
 }
 </script>
-<style lang="less" scoped>
-.chart {
-  width: 800px;
-  height: 500px;
-  display: inline-block;
-}
-</style>
