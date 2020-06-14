@@ -1,18 +1,29 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <k-chart :id="'agChart'" :data="agData"></k-chart>
+    <k-chart :id="'alChart'" :data="alData"></k-chart>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
-
+import AG0 from '@/assets/AG0.json'
+import AL0 from '@/assets/AL0.json'
+import kChart from '@/components/kChart'
 export default {
-  name: "Home",
-  components: {
-    HelloWorld
-  }
-};
+  name: 'Home',
+  components: {kChart},
+  data() {
+    return {
+      chart: '',
+      agData: AG0,
+      alData: AL0
+    }
+  },
+  async mounted() {
+    console.log(AG0.list, AL0.list)
+  },
+  methods: {}
+}
 </script>
+<style lang="less" scoped>
+</style>
